@@ -11,7 +11,7 @@ const controller = {
   async getAllCafes(req, res) {
     try {
       const [results] = await pool.query(`
-            SELECT name
+            SELECT no, name
             FROM cafes
         ;`);
 
@@ -28,7 +28,8 @@ const controller = {
 
       const [results] = await pool.query(
         `
-          SELECT b.name,
+          SELECT b.no, 
+          b.name,
           b.image,
           c.name AS 'cafe'
           FROM beans AS b
@@ -53,7 +54,8 @@ const controller = {
 
       const [results] = await pool.query(
         `
-          SELECT b.name,
+          SELECT b.no, 
+          b.name,
           b.image,
           c.name AS 'cafe'
           FROM beans AS b
