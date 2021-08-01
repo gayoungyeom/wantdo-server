@@ -31,6 +31,7 @@ const controller = {
           SELECT b.no, 
           b.name,
           b.image,
+          c.no AS 'cafe_no',
           c.name AS 'cafe'
           FROM beans AS b
           JOIN cafes AS c
@@ -57,6 +58,7 @@ const controller = {
           SELECT b.no, 
           b.name,
           b.image,
+          c.no AS 'cafe_no',
           c.name AS 'cafe'
           FROM beans AS b
           JOIN cafes AS c
@@ -83,6 +85,7 @@ const controller = {
         b.type,
         b.description,
         b.image,
+        c.no AS 'cafe_no',
         c.name AS 'cafe',
         r.name AS 'roasting'
         FROM beans AS b
